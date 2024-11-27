@@ -1,64 +1,138 @@
-# Knowledge Incorporation Frameworks Using LLMs
-[![Awesome](https://awesome.re/badge.svg)](https://github.com/Glasgow-AI4BioMed/Knowledge-Incorporation-Frameworks-Using-LLMs) 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/Glasgow-AI4BioMed/Knowledge-Incorporation-Frameworks-Using-LLMs/blob/main/LICENSE)
+# Knowledge Incorporation Frameworks Using LLMs  
+[![Awesome](https://awesome.re/badge.svg)](https://github.com/Glasgow-AI4BioMed/Knowledge-Incorporation-Frameworks-Using-LLMs)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/Glasgow-AI4BioMed/Knowledge-Incorporation-Frameworks-Using-LLMs/blob/main/LICENSE)  
 
->How can knowledge be incorporated into Large Language Models (LLMs)?
+> **How can knowledge be incorporated into Large Language Models (LLMs)?**
 
-🙌 This repository collects papers on integration techniques for incorporating **Knowledge Graphs (KG)** into **Large Language Modelling (LLM)**.
+🎉 This repository curates papers, techniques, and frameworks for integrating **Knowledge Graphs (KGs)** into **Large Language Models (LLMs)**.
 
-😎 Welcome to recommend missing papers through **`Adding Issues`** or **`Pull Requests`**. 
-
-## 🔔 News
-
-## Content
-  
-- [📚 Backbone Models](#backbone-models)
-  - **Single-Modal Models**
-  - **Multi-Modal Models**
-- [🔐 Encoder Methods](#encoder-methods)
-  - **Bi-encoder**
-  - **Cross-encoder**
-- [🔗 Integration Techniques](#integration-techniques)
-  - **Full Fine-Tuning (FT)**
-  - **Parameter-Efficient Fine-Tuning (PEFT)**
-    - **Adapter**
-    - **LoRA (Low-Rank Adaptation)**
-    - **Prefix-Tuning**
-- [🔄 Task Setups](#task-setups)
-  - **Single-Instance Tasks**
-  - **Multi-Instance Tasks**
-- [🧠 Knowledge Graphs (KG)](#kg)
-  - **Homogeneous**
-  - **Heterogeneous**
-  - **Large Scale KG Integration**
 ---
 
-## Backbone Models
-- The backbone models in this framework focus on handling either single-modal or multi-modal inputs to integrate KG knowledge into LLMs. The models can vary from simpler structures like bi-encoders to more sophisticated cross-encoders, depending on the specific task requirements.
+## 🌟 Why Incorporate KGs into LLMs?  
 
-## Encoder Methods
-- **Bi-encoder**: This method encodes two inputs separately (e.g., two drugs or drug-protein pairs), making it ideal for tasks where individual entity-level embeddings are needed. Bi-encoders are efficient for tasks like pairwise similarity or interaction prediction, as they handle separate representations and later calculate their interactions.
-  
-- **Cross-encoder**: In contrast to bi-encoders, cross-encoders jointly encode multiple inputs in a unified context. This approach captures richer interactions between the entities by concatenating them before feeding into the model, making it more suitable for capturing complex relationships in drug-drug or drug-protein interactions.
+### 📚 Enhanced Knowledge Representation  
+Integrating KGs with LLMs enables structured knowledge representation, improving reasoning and contextual understanding.
 
-## Integration Techniques
-- **Full Fine-Tuning (FT)**: This technique involves updating all parameters of the model. It is useful when large amounts of task-specific data are available and when deep integration of KG knowledge with LLMs is necessary.
-  
-- **Parameter-Efficient Fine-Tuning (PEFT)**: PEFT is a collection of techniques designed to fine-tune models efficiently by only modifying a small number of parameters. These methods include:
-  - **Adapter**: Trainable modules inserted between layers of a pre-trained model, allowing task-specific adjustments without updating the main model.
-  - **LoRA (Low-Rank Adaptation)**: LoRA introduces low-rank decompositions into pre-trained models to efficiently learn task-specific representations with minimal parameter updates.
-  - **Prefix-Tuning**: This method optimizes specific task-related prefixes while freezing most of the main model's parameters, allowing efficient adaptation to new tasks.
+### 🧐 Improved Explainability, Reasoning, and Inference  
+KGs provide a logical foundation for tasks requiring interpretable and inference-driven outputs.
 
-## Task Setups
-- **Single-Instance Tasks**: These tasks focus on using a single entity (e.g., a drug or a protein) as input for tasks such as classification or side-effect prediction.
-  
-- **Multi-Instance Tasks**: Multi-instance tasks require processing multiple entities (e.g., drug pairs, drug-protein pairs) simultaneously, making them suitable for tasks like interaction prediction.
+### 🎯 Increased Accuracy and Reduced Hallucination  
+LLMs benefit from the factual and structured knowledge in KGs, minimising hallucination and enhancing performance.
 
-## Knowledge Graphs (KG)
-- **Homogeneous KGs**: Homogeneous KGs consist of single-type nodes and edges (e.g., drug-drug interactions). These are simpler to model but may lack the complexity needed for diverse biological tasks.
-  
-- **Heterogeneous KGs**: Heterogeneous KGs contain multiple types of nodes and edges (e.g., drug-protein interactions, protein-protein interactions). This structure allows for richer representations of biomedical data.
-  
-- **Large Scale KG Integration**: Efficiently integrating large-scale KGs into LLM frameworks is essential for handling complex datasets in the biomedical domain. Scalability is key when dealing with KGs containing millions of nodes and edges.
+---
 
-- ##  Papers
+## 🚀 How to Incorporate KGs Effectively?  
+
+### **Key Components**  
+
+- **Backbone Models**: Support for protein, molecular, text, and visual modalities.  
+- **Encoder Methods**: Bi-encoder and cross-encoder strategies to process and align KG with LLM representations.  
+- **Integration Stages**: Pretraining, post-training, fine-tuning, and inference pipelines.  
+- **Integration Techniques**: Includes Adapters, LoRA, In-Context Learning (ICL), Retrieval-Augmented Generation (RAG), and LLM Agent.
+
+---
+
+## 📰 Latest Updates  
+
+Stay tuned for news, newly added papers, and feature updates!
+
+---
+
+## 📖 Table of Contents  
+
+- [Backbone Models](#backbone-models)  
+- [Encoder Methods](#encoder-methods)  
+- [Integration Stages](#integration-stages)  
+- [Integration Techniques](#integration-techniques)  
+- [Task Setups](#task-setups)  
+- [Knowledge Graphs (KG)](#knowledge-graphs)  
+
+---
+
+## 📚 Backbone Models  
+
+Backbone models form the foundation for integrating KG knowledge into LLMs. These models are tailored for either single-modal or multi-modal inputs:  
+
+- **Protein Models**  
+- **Molecular Models**  
+- **Text Models**  
+- **Visual Models**  
+
+---
+
+## 🔐 Encoder Methods  
+
+### **Bi-Encoder**  
+- Encodes two inputs separately (e.g., drugs or drug-protein pairs).  
+- Efficient for entity-level embedding tasks such as pairwise similarity or interaction prediction.  
+
+### **Cross-Encoder**  
+- Jointly encodes multiple inputs in a unified context, capturing richer interactions.  
+- Ideal for complex relationship modelling, such as drug-drug or drug-protein interactions.  
+
+---
+
+## 🛠 Integration Stages  
+
+1. **Pretraining**: Incorporating KG knowledge during the initial training phase of LLMs.  
+2. **Post-Training**: Updating LLMs with additional KG-based tasks after the initial training.  
+3. **Fine-Tuning**: Adjusting specific parameters for task-specific objectives.  
+4. **Inference**: Leveraging KG knowledge during real-time prediction or generation.
+
+---
+
+## 🔗 Integration Techniques  
+
+### **Full Fine-Tuning (FT)**  
+- Updates all model parameters for deep integration of KG knowledge.  
+- Requires substantial task-specific data.  
+
+### **Parameter-Efficient Fine-Tuning (PEFT)**  
+Efficient fine-tuning strategies that modify only a small subset of parameters:  
+
+- **Adapter**: Inserted between model layers to enable task-specific adjustments.  
+- **LoRA (Low-Rank Adaptation)**: Uses low-rank decompositions for task-specific learning.  
+- **Prefix-Tuning**: Optimises task-related prefixes, freezing most model parameters.  
+- **ICL (In-Context Learning)**: Dynamically adapts to tasks without parameter updates.  
+- **RAG (Retrieval-Augmented Generation)**: Combines LLM generation with external knowledge retrieval.  
+- **LLM Agent**: Deploys LLMs as reasoning agents, integrating KG knowledge dynamically.
+
+---
+
+## 🔄 Task Setups  
+
+### **Single-Instance Tasks**  
+- Use a single entity (e.g., drug or protein) as input for reaction or property prediction tasks.  
+
+### **Multi-Instance Tasks**  
+- Process multiple entities (e.g., drug pairs, drug-protein pairs) simultaneously.  
+
+---
+
+## 🧠 Knowledge Graphs  
+
+### **Homogeneous KGs**  
+- Single-type nodes and edges (e.g., drug-drug interactions).  
+- Simpler to model but less versatile for complex tasks.  
+
+### **Heterogeneous KGs**  
+- Multiple types of nodes and edges (e.g., drug-protein interactions).  
+- Richer representations for biomedical tasks.  
+
+### **Large-Scale KG Integration**  
+Efficiently incorporating massive KGs into LLMs is crucial for scalability and performance.  
+
+Key considerations:  
+- **Scalability**: Graph sampling, indexing, and efficient representations.  
+- **Multi-Modal Data**: Integration of textual, numerical, and structural information.  
+- **Dynamic Updates**: Adapting to continuously evolving KGs.  
+- **Sparse Connectivity**: Addressing sparsity through link prediction and knowledge completion.  
+- **Knowledge Distillation**: Extracting essential knowledge for task-specific fine-tuning.  
+
+---
+
+## 🙌 Contributing  
+
+We welcome your contributions!  
+
+- **Add Missing Papers**: Submit suggestions via [Issues](https://github.com/Glasgow-AI4BioMed/Knowledge-Incorporation-Frameworks-Using-LLMs/issues) or [Pull Requests](https://github.com/Glasgow-AI4BioMed/Knowledge-Incorporation-Frameworks-
