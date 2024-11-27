@@ -4,7 +4,7 @@
 
 > **How can knowledge be incorporated into Large Language Models (LLMs)?**
 
-🎉 This repository curates papers, techniques, and frameworks for integrating **Knowledge Graphs (KGs)** into **Large Language Models (LLMs)**.
+🙌 This repository collects papers on integration techniques and frameworks for incorporating Knowledge Graphs (KG) into Large Language Modelling (LLM).
 
 ---
 
@@ -26,7 +26,7 @@ LLMs benefit from the factual and structured knowledge in KGs, minimising halluc
 ### **Key Components**  
 
 - **Backbone Models**: Support for protein, molecular, text, and visual modalities.  
-- **Encoder Methods**: Bi-encoder and cross-encoder strategies to process and align KG with LLM representations.  
+- **Encoder Methods**: Bi-encoder and Cross-encoder.
 - **Integration Stages**: Pretraining, post-training, fine-tuning, and inference pipelines.  
 - **Integration Techniques**: Includes Adapters, LoRA, In-Context Learning (ICL), Retrieval-Augmented Generation (RAG), and LLM Agent.
 
@@ -135,4 +135,13 @@ Key considerations:
 
 We welcome your contributions!  
 
-- **Add Missing Papers**: Submit suggestions via [Issues](https://github.com/Glasgow-AI4BioMed/Knowledge-Incorporation-Frameworks-Using-LLMs/issues) or [Pull Requests](https://github.com/Glasgow-AI4BioMed/Knowledge-Incorporation-Frameworks-
+- **Add Missing Papers**: Submit suggestions via [Issues](https://github.com/Glasgow-AI4BioMed/Knowledge-Incorporation-Frameworks-Using-LLMs/issues) or [Pull Requests](https://github.com/Glasgow-AI4BioMed/Knowledge-Incorporation-Frameworks-Using-LLMs/pulls).  
+- **Share Your Ideas**: Let us know how we can improve or expand this repository.  
+
+---
+
+## 📜 Licence  
+
+This project is licensed under the [MIT Licence](https://github.com/Glasgow-AI4BioMed/Knowledge-Incorporation-Frameworks-Using-LLMs/blob/main/LICENSE).
+
+---
